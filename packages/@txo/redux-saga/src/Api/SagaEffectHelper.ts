@@ -37,7 +37,7 @@ export const takeLatestByContext = <Fn extends (...args: any[]) => any>(
         yield cancel(lastTask) // cancel is no-op if the task has already terminated
         log.debug(`cancelled: ${context}`)
       }
-      // TODO: resolve TS issue with Parameters<Fn>
+      // @ts-expect-error -- Argument of type '[DefaultRootService, ContextServiceAction<{}, undefined, undefined>]' is not assignable to parameter of type 'Parameters<Fn>'. ts(2345)
       lastTaskContextMap[context] = yield fork<Fn>(saga, service, action)
     }
   })
