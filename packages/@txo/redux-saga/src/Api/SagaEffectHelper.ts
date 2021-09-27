@@ -5,11 +5,14 @@
 **/
 
 import {
+  call,
   fork,
   take,
   cancel,
   ForkEffect,
+  SagaReturnType,
 } from 'redux-saga/effects'
+import type { SagaIterator } from 'redux-saga'
 import type { Task } from '@redux-saga/types'
 import type {
   ContextServiceAction,
@@ -22,10 +25,16 @@ const log = new Log('txo.redux-saga.Api.SagaEffectHelper')
 
 const DEFAULT_CONTEXT = 'default'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const takeLatestByContext = <Fn extends (...args: any[]) => any>(
+type ContextFn<ARGS> = (
+  service: DefaultRootService,
+  action: ContextServiceAction,
+  ...args: ARGS[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+) => any
+
+export const takeLatestByContext = <ARGS, FN extends ContextFn<ARGS>>(
   patternOrChannel: string,
-  saga: Fn,
+  saga: FN,
   service: DefaultRootService,
 ): ForkEffect<never> => fork(function * () {
     const lastTaskContextMap: Record<string, Task> = {}
@@ -37,8 +46,7 @@ export const takeLatestByContext = <Fn extends (...args: any[]) => any>(
         yield cancel(lastTask) // cancel is no-op if the task has already terminated
         log.debug(`cancelled: ${context}`)
       }
-      // @ts-expect-error -- Argument of type '[DefaultRootService, ContextServiceAction<{}, undefined, undefined>]' is not assignable to parameter of type 'Parameters<Fn>'. ts(2345)
-      lastTaskContextMap[context] = yield fork<Fn>(saga, service, action)
+      lastTaskContextMap[context] = yield fork<ContextFn<ARGS>>(saga, service, action)
     }
   })
 
@@ -46,15 +54,14 @@ export const takeLatestByContext = <Fn extends (...args: any[]) => any>(
 export const errorSafeFork = <Fn extends (...args: any[]) => any>(
   fn: Fn,
   ...args: Parameters<Fn>
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-): ForkEffect<any> => {
-  try {
-    return fork(fn, ...args)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (error: any) {
-    configManager.config.onError(error)
-    return fork(function * () {
-      yield take('*')
-    })
+): ForkEffect<SagaReturnType<Fn>> | undefined => {
+  function * errorSafeSaga (...args: Parameters<Fn>): SagaIterator<void> {
+    try {
+      return yield call(fn, ...args)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      configManager.config.onError(error)
+    }
   }
+  return fork(errorSafeSaga, ...args)
 }
