@@ -1,6 +1,6 @@
 {
   "name": "@txo-peer-dep/redux-saga",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Technology Studio - Redux saga",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -29,6 +29,5 @@
   "dependencies": {
     "@txo/config-manager": "^3.0.1"
   },
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }
