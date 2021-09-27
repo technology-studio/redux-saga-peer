@@ -26,10 +26,12 @@
     "build:watch:lib": "yarn tsc --watch",
     "prepare": "yarn build"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "peerDependencies": {
     "@txo/log": "^2.0.0",
     "@txo/service-react": "^2.1.1",
+    "@txo-peer-dep/redux-saga": "^1.0.0",
     "redux-saga": "^1.1.3"
   }
 }
