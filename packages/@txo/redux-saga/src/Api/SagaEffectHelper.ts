@@ -25,30 +25,32 @@ const log = new Log('txo.redux-saga.Api.SagaEffectHelper')
 
 const DEFAULT_CONTEXT = 'default'
 
-type ContextFn<ARGS> = (
+type ContextFn = (
   service: DefaultRootService,
-  action: ContextServiceAction,
-  ...args: ARGS[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  action: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...args: any[]
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ) => any
 
-export const takeLatestByContext = <ARGS, FN extends ContextFn<ARGS>>(
+export const takeLatestByContext = (
   patternOrChannel: string,
-  saga: FN,
+  saga: ContextFn,
   service: DefaultRootService,
 ): ForkEffect<never> => fork(function * () {
-    const lastTaskContextMap: Record<string, Task> = {}
-    while (true) {
-      const action: ContextServiceAction = yield take(patternOrChannel)
-      const context = action.context ?? DEFAULT_CONTEXT
-      const lastTask = lastTaskContextMap[context]
-      if (lastTask) {
-        yield cancel(lastTask) // cancel is no-op if the task has already terminated
-        log.debug(`cancelled: ${context}`)
-      }
-      lastTaskContextMap[context] = yield fork<ContextFn<ARGS>>(saga, service, action)
+  const lastTaskContextMap: Record<string, Task> = {}
+  while (true) {
+    const action: ContextServiceAction = yield take(patternOrChannel)
+    const context = action.context ?? DEFAULT_CONTEXT
+    const lastTask = lastTaskContextMap[context]
+    if (lastTask) {
+      yield cancel(lastTask) // cancel is no-op if the task has already terminated
+      log.debug(`cancelled: ${context}`)
     }
-  })
+    lastTaskContextMap[context] = yield fork<ContextFn>(saga, service, action)
+  }
+})
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const errorSafeFork = <Fn extends (...args: any[]) => any>(
