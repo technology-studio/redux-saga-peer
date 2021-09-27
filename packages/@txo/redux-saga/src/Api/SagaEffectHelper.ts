@@ -54,7 +54,7 @@ export const takeLatestByContext = <ARGS, FN extends ContextFn<ARGS>>(
 export const errorSafeFork = <Fn extends (...args: any[]) => any>(
   fn: Fn,
   ...args: Parameters<Fn>
-): ForkEffect<SagaReturnType<Fn>> | undefined => {
+): ForkEffect<SagaReturnType<Fn>> => {
   function * errorSafeSaga (...args: Parameters<Fn>): SagaIterator<void> {
     try {
       return yield call(fn, ...args)
