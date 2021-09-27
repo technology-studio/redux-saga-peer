@@ -15,6 +15,7 @@ import type {
   ContextServiceAction,
   DefaultRootService,
 } from '@txo/service-react'
+import { configManager } from '@txo-peer-dep/redux-saga'
 import { Log } from '@txo/log'
 
 const log = new Log('txo.redux-saga.Api.SagaEffectHelper')
@@ -44,14 +45,14 @@ export const takeLatestByContext = <Fn extends (...args: any[]) => any>(
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const errorSafeFork = <Fn extends (...args: any[]) => any>(
   fn: Fn,
-  onError: (error: unknown) => void,
   ...args: Parameters<Fn>
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): ForkEffect<any> => {
   try {
     return fork(fn, ...args)
-  } catch (error) {
-    onError(error)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (error: any) {
+    configManager.config.onError(error)
     return fork(function * () {
       yield take('*')
     })
