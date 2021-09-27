@@ -5,12 +5,10 @@
 **/
 
 import { ConfigManager } from '@txo/config-manager'
-import type { ServiceErrorException } from '@txo/service-prop'
 
 export type Config = {
-  onError: (error: Error | ServiceErrorException) => void,
+  onError: (error: Error) => void,
 }
 
 export const configManager: ConfigManager<Config> = new ConfigManager<Config>({
-  onError: () => undefined,
 })
