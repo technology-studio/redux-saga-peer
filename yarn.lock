@@ -1314,19 +1314,27 @@
     constant-case "^3.0.4"
     redux "^4.2.0"
 
+"@txo/redux@^4.0.8":
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/@txo/redux/-/redux-4.0.8.tgz#445023c09a561eecd1376d4950e7cdfdd8679f15"
+  integrity sha512-OXN75Ui1vuYZPrC+5fRo8LerfTAW4JuJKXZ453ls+c6OR3fCHPamXwc8AD5oWR/mWeYkKUsqIqlfgkairBBV4A==
+  dependencies:
+    constant-case "^3.0.4"
+    redux "^4.2.0"
+
 "@txo/service-prop@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@txo/service-prop/-/service-prop-2.2.1.tgz#47781f5ed37556503ed9363cc995e2d1c8fe07f1"
   integrity sha512-6Ieb0bt8xMfsEf/6bHdOwOMlxtE9vrGx6ZZylXM1Dtp2qYWkw0aHI8dNaeGAMsWem9Raikz/qAgaZqiLXFy8ZQ==
 
-"@txo/service-react@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.1.tgz#52e2400f3edc124c882a7a214712ffec7df19acc"
-  integrity sha512-gSYfivzuxfbMFQrmPZ1t0sCeJZ3yPb/HB9pHXsDp3IQaax2EKberIx9yY2f81/5Cjod6YgSq/DYVLKEcRuGzrg==
+"@txo/service-react@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.2.tgz#1b6d9670aa2ffa1768029de58583bf54d4d9e456"
+  integrity sha512-5THx4oR0HlCqYQDw5Xd3JpoP1J+07o9M8wHTjwSYHKgJq3WGOuN5Er55HHHRhGZcyWXgIk74dYQb14TVOmR7ag==
   dependencies:
     "@txo/context-redux" "^3.0.0"
     "@txo/log" "^2.0.1"
-    "@txo/redux" "^4.0.7"
+    "@txo/redux" "^4.0.8"
     "@txo/service-prop" "^2.2.1"
     lodash.get "^4.4.2"
 
