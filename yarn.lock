@@ -1287,13 +1287,13 @@
   resolved "https://registry.yarnpkg.com/@txo/config-manager/-/config-manager-3.1.0.tgz#9a38d0ba2b2355f973775bafe884cdbb7225dc0d"
   integrity sha512-rYSd5Mk4URK3hs7Y5nSXst4KOidmjJPeaNkh+D/L1ndVodvKwXO/rZV00VYXpW71/KSaG1Hj83At3r4WmboKvg==
 
-"@txo/context-redux@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@txo/context-redux/-/context-redux-3.0.1.tgz#9d0338df3acf5f230f954a552bb1b878821c3ce5"
-  integrity sha512-mDVxHe0My7HDgBnqTwwUfpNJII35ZaDMdRUQxTUcWSI9m3Xy9r4cUrgIBe5DJpcF/vvpqVRXvDd4FFx07aREgw==
+"@txo/context-redux@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@txo/context-redux/-/context-redux-3.0.3.tgz#219ff05ef6dd64fc123686972265d85450262ea1"
+  integrity sha512-NLNUACpv0SScShk01M/xpxknqQWnCxffHph1terR59Qf4NA7qa1TtGK3VlkqzOG4FHYDX1saoqbQx3c/l9xY6w==
   dependencies:
     "@txo/functional" "^4.5.1"
-    "@txo/redux" "^4.0.7"
+    "@txo/redux" "^4.0.9"
 
 "@txo/functional@^4.5.1":
   version "4.5.1"
@@ -1313,14 +1313,6 @@
   resolved "https://registry.yarnpkg.com/@txo/log/-/log-2.0.1.tgz#fd96044751a9930cf5136a7248ad8989efce756c"
   integrity sha512-CC+ZkiTbytuNVqvusQFdp72i1G2MhA5ITohxEMEi0qGLGIzxtYT20vYkoFRC8XPbsZydbu9uVtpH5wA/X/g/eg==
 
-"@txo/redux@^4.0.7":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@txo/redux/-/redux-4.0.7.tgz#072eddbc49b149dcb8befe26a1056aacebd917eb"
-  integrity sha512-WPhA3y1IL6mjNrso/o3iOZnsqEtbbaEJBwThL4pLURZMQg0FXy2kr2Gaj1DzONmFSOL2BBmzaO5fS23c304xtw==
-  dependencies:
-    constant-case "^3.0.4"
-    redux "^4.2.0"
-
 "@txo/redux@^4.0.9":
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/@txo/redux/-/redux-4.0.9.tgz#f36a0820935660ef14cfaedb5163867a4d7ef51c"
@@ -1335,12 +1327,12 @@
   resolved "https://registry.yarnpkg.com/@txo/service-prop/-/service-prop-2.2.1.tgz#47781f5ed37556503ed9363cc995e2d1c8fe07f1"
   integrity sha512-6Ieb0bt8xMfsEf/6bHdOwOMlxtE9vrGx6ZZylXM1Dtp2qYWkw0aHI8dNaeGAMsWem9Raikz/qAgaZqiLXFy8ZQ==
 
-"@txo/service-react@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.3.tgz#26b9e91135533fed9cad1326d3db6b8951488d94"
-  integrity sha512-EdFnplWOmhd/WGWobD1O9nrKRWrOXB1FyN/nEvdtYizQ66WdNtUqJlV+QdfgHgqdVloH96DwyTU+J9TbPkuCVA==
+"@txo/service-react@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.5.tgz#1f99079a265f3b33c6b7a2cbdbe84a380508a735"
+  integrity sha512-7XmA1AK494S5DQ2YEYXoUkI6/7A3Kebaf+9kY/yrPZT8Y4BvWbSUhbqETP61sGncsQxTKYc4LEsphPnSJA9tbg==
   dependencies:
-    "@txo/context-redux" "^3.0.0"
+    "@txo/context-redux" "^3.0.3"
     "@txo/log" "^2.0.1"
     "@txo/redux" "^4.0.9"
     "@txo/service-prop" "^2.2.1"
