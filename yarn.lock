@@ -1553,14 +1553,14 @@
   resolved "https://registry.yarnpkg.com/@txo/service-prop/-/service-prop-2.2.2.tgz#42dfd1088f662c92583b3521b45f29dd53b476ce"
   integrity sha512-E2RNlFgrLX4A5/ZDlvOABZPtNvjxWY4XG0SKHZrQ1UUWmC0QGZINQlq1+oKkRb4SZwgNBqyhKRKozO7VuurvwQ==
 
-"@txo/service-react@^5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.17.tgz#b1245918637a538cbb774f0fcce503ddb53e9f30"
-  integrity sha512-PO0HunYAE6XrTti7oJnoa6vcMIzF2gRq8DUOTNbmvtj9nlOnUqTA4JNeAQLROhjG6ciqU+JniS/5aonMLpFk4A==
+"@txo/service-react@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.19.tgz#9cea779f54f863b64b0fc858a4b6772e97cddc50"
+  integrity sha512-P9T8j/BLqe/ezv8sknGwsofBx97G+wiNKyKc39DSOILTpE+KtKWu2OWiknz9uKRNOVd4DhSf/dgns7bSQZvPzw==
   dependencies:
     "@txo/context-redux" "^3.0.8"
-    "@txo/functional" "^4.6.0"
-    "@txo/log" "^2.0.1"
+    "@txo/functional" "^4.6.1"
+    "@txo/log" "^2.0.2"
     "@txo/redux" "^4.0.12"
     "@txo/service-prop" "^2.2.2"
     lodash.get "^4.4.2"
