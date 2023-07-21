@@ -42,7 +42,7 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@txo-peer-dep/log": "^4.0.1",
-    "@txo/log": "^2.0.1",
+    "@txo/log": "^2.0.2",
     "@txo/log-console": "^3.0.0",
     "@txo/service-prop": "^2.2.2",
     "@txo/service-react": "^5.0.17",
