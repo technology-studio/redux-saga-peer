@@ -1645,6 +1645,13 @@
   dependencies:
     "@txo/functional" "^4.6.7"
 
+"@txo/service-prop@^2.2.8":
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/@txo/service-prop/-/service-prop-2.2.8.tgz#6f513117dd73ae38f3ab5dbaaad6b5d48cace9ee"
+  integrity sha512-RLjNQkz4biTQV0zlG3AyNZHQ/LTvAjSK1q4svgbuRp8ovJXCdCZVBblWNB6vc4vAajSgknjXwITaC960mHaOaQ==
+  dependencies:
+    "@txo/functional" "^4.6.8"
+
 "@txo/service-react@^5.0.31":
   version "5.0.31"
   resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.31.tgz#f02a6b026b5e04b706ff6c5fb01cfe3be624cac9"
