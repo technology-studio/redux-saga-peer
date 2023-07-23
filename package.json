@@ -44,7 +44,7 @@
     "@txo-peer-dep/log": "^4.0.1",
     "@txo/log": "^2.0.9",
     "@txo/log-console": "^3.0.0",
-    "@txo/service-prop": "^2.2.8",
+    "@txo/service-prop": "^2.2.9",
     "@txo/service-react": "^5.0.32",
     "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
