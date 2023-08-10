@@ -1543,13 +1543,13 @@
   dependencies:
     "@txo/functional" "^4.6.12"
 
-"@txo/service-react@^5.0.43":
-  version "5.0.43"
-  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.43.tgz#ce95482ab742dd147774e0f11c552fbc024f3b5f"
-  integrity sha512-A0T8xBDneDJaOVZ0fLNn8OtrqdOeaZc4s5x+Kb7ls04GvKhw7pjsju6yxI0zK5kNeKFHbrX+IBaAk1mw5U1Xmw==
+"@txo/service-react@^5.0.44":
+  version "5.0.44"
+  resolved "https://registry.yarnpkg.com/@txo/service-react/-/service-react-5.0.44.tgz#7c2e0bd44723e02872dc6e7b93d803871e65b398"
+  integrity sha512-qW2vb0tURU/XIfaGmOplDc+Fe0y5WXiTwnkeZTULleCcwWfouJsMBDjCQ++mg3473VbuHHQByMoVAWdJhxm+HA==
   dependencies:
     "@txo/context-redux" "^3.0.23"
-    "@txo/functional" "^4.6.11"
+    "@txo/functional" "^4.6.12"
     "@txo/log" "^2.0.12"
     "@txo/redux" "^4.0.24"
     "@txo/service-prop" "^2.2.11"
