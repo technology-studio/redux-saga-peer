@@ -34,7 +34,7 @@
     "update-boilerplate-version": "./scripts/update-boilerplate-version.sh"
   },
   "dependencies": {
-    "@txo/config-manager": "^3.1.0"
+    "@txo/config-manager": "^3.2.0"
   },
   "devDependencies": {
     "@txo-peer-dep/log": "^4.0.2",
