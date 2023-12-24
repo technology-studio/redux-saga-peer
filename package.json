@@ -43,7 +43,7 @@
     "@txo/log-console": "^3.0.0",
     "@txo/semantic-release": "^1.0.7",
     "@txo/service-prop": "^2.2.16",
-    "@txo/service-react": "^5.1.8",
+    "@txo/service-react": "^5.1.9",
     "@txo/tsconfig": "^1.1.1",
     "@types/jest": "^29.5.11",
     "concurrently": "^8.2.2",
