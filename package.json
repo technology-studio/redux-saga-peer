@@ -37,7 +37,7 @@
     "@txo/config-manager": "^3.2.0"
   },
   "devDependencies": {
-    "@txo-peer-dep/log": "^4.0.3",
+    "@txo-peer-dep/log": "^4.0.4",
     "@txo/commitlint": "^1.0.14",
     "@txo/log": "^2.0.14",
     "@txo/log-console": "^3.0.0",
