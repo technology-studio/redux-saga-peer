@@ -48,7 +48,7 @@
     "@txo/service-react": "^5.1.22",
     "@txo/tsconfig-cjs": "^2.0.0",
     "@types/jest": "^29.5.14",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.1.1",
     "eslint-config-txo-package-typescript": "^1.0.16",
     "husky": "^9.1.7",
     "immutability-helper": "^3.1.1",
